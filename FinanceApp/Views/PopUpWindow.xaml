@@ -1,0 +1,108 @@
+<Window x:Class="FinanceApp.Views.PopUpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Width="350"
+        Height="200"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Title="{Binding Title}"
+        Background="{DynamicResource WindowBackground}">
+
+    <Window.Resources>
+        <Style x:Key="AnimatedButtonStyle"
+TargetType="Button">
+
+            <Setter Property="Foreground"
+     Value="White"/>
+
+            <Setter Property="FontSize"
+     Value="18"/>
+
+            <Setter Property="FontWeight"
+     Value="Bold"/>
+
+            <Setter Property="Cursor"
+     Value="Hand"/>
+
+            <Setter Property="BorderThickness"
+     Value="0"/>
+
+            <Setter Property="FocusVisualStyle"
+     Value="{x:Null}"/>
+
+            <Setter Property="Background"
+     Value="{DynamicResource ButtonColor}"/>
+
+            <Setter Property="Template">
+
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="Button">
+
+                        <Border x:Name="border"
+                 CornerRadius="12"
+                 Padding="10"
+                 Background="{TemplateBinding Background}">
+
+                            <ContentPresenter HorizontalAlignment="Center"
+                               VerticalAlignment="Center"/>
+
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+
+                            <!-- HOVER -->
+                            <Trigger Property="IsMouseOver"
+                      Value="True">
+
+                                <Setter Property="Background"
+                         Value="{DynamicResource ButtonHoverColor}"/>
+
+                            </Trigger>
+
+                            <!-- PRESSED -->
+                            <Trigger Property="IsPressed"
+                      Value="True">
+
+                                <Setter Property="Background"
+                         Value="{DynamicResource ButtonPressedColor}"/>
+
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+
+                </Setter.Value>
+
+            </Setter>
+
+        </Style>
+
+        <Style TargetType="TextBlock">
+
+            <Setter Property="Foreground"
+                    Value="{DynamicResource ForegroundColor}"/>
+
+        </Style>
+    </Window.Resources>
+
+            <Grid>
+
+        <TextBlock Text="{Binding Message}"
+                   FontSize="18"
+                   TextWrapping="Wrap"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Margin="20,10,20,70"/>
+
+        <Button Content="OK"
+                Width="100"
+                Height="40"
+                VerticalAlignment="Bottom"
+                Margin="0,0,0,20"
+                Style="{StaticResource AnimatedButtonStyle}"
+                Click="Button_Click"/>
+
+    </Grid>
+</Window>

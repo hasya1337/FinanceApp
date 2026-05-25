@@ -1,0 +1,34 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <!-- КНОПКИ -->
+
+    <SolidColorBrush x:Key="ButtonColor"
+                 Color="#2196F3"/>
+
+    <SolidColorBrush x:Key="ButtonHoverColor"
+                 Color="#42A5F5"/>
+
+    <SolidColorBrush x:Key="ButtonPressedColor"
+                 Color="#1976D2"/>
+
+    <SolidColorBrush x:Key="TopButtonHover"
+                 Color="#22000000"/>
+
+    <SolidColorBrush x:Key="TopButtonPressed"
+                 Color="#33000000"/>
+
+    <!-- ОКНО -->
+    
+    <SolidColorBrush x:Key="WindowBackground" 
+                     Color="White"/>
+    
+    <SolidColorBrush x:Key="ControlBackground" 
+                     Color="#F0F0F0"/>
+    
+    <SolidColorBrush x:Key="ForegroundColor" 
+                     Color="Black"/>
+    
+
+</ResourceDictionary>
+    
